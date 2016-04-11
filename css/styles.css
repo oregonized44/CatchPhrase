@@ -1,0 +1,6 @@
+.title-font {
+  font-family: scribble-box, sans-serif;
+}
+
+@font-face { font-family: scribble-box; src: url('../fonts/scribble-box.ttf'); }
+@font-face { font-family: scribble-box; font-weight: bold; src: url('../fonts/scribble-box.ttf');}
