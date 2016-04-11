@@ -43,7 +43,8 @@ function pass(){      //what happens when we click pass
   display(newWord());
   nextTurn();
 }
-function nextRound(){
+
+function nextRound(){  //what happens when next round take place
   game.roundNumber++;
   reset timer function
   if(game.activeTeam == 1){
@@ -55,11 +56,11 @@ function nextRound(){
 team1.activePlayer++;
 team2.activePlayer++;
 }
-function over(){
-  is the numer of players.length array equal to the number of rounds?
-  figure out the total score
-  alert winning team
-  display next page
+function over(){   //what happens when game is over
+playerNumber === rounds ?   true (game is over) alert(winner) display last page    : false(nextRound());
+is the numer of players.length array equal to the number of rounds?
+
+
 }
 function reset(){
  reloads page or sends you back to the main page
