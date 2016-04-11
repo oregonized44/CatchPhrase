@@ -1,3 +1,4 @@
+var wordList = ["dog", "cat", "Parot", "Horse","Song","Loud","Lazy"];
 
 
 
@@ -6,36 +7,53 @@ function Team(name,playerNumbers){    // contstructs our team object
 this.teamName = name;
 this.players = playerNumbers;
 this.score = 0;
-this.nextPlayer = 1;
+this.activePlayer = 1;
 }
+
 function Game(){       // constructs our game object
+this.activeTeam = 1;
 }
 
 Team.prototype.won = function(){
   this.score++;
-
-
 }
 
-Team.prototype. = function () {
+function nextTurn(){
+  if (game.activeTeam === 1) {
+    game.activeTeam = 2;
+  } else if (game.activeTeam === 2) {
+    game.activeTeam = 1;
+  }
+}
 
-};
 function play(){     // play button on click willlllll
   set team name value to our name val in our constructor
   sets amount of players in our constructor
   loads following page
 }
 
+function newWord() {      //removes and displays word selected at random from wordList
+  var i = Math.floor(Math.random() * wordList.length);
+  var word = wordList[i];
+  wordList.splice(i,1);
+  return word;
+}
+
 function pass(){      //what happens when we click pass
-pops the current word in the display
-pushes prior word out
-change team
+  display(newWord());
+  nextTurn();
 }
 function nextRound(){
-  update round number
-  reset timer
-  update score
-  update active player
+  game.roundNumber++;
+  reset timer function
+  if(game.activeTeam == 1){
+    team2.score++;
+  }else{
+    team1.score++;
+
+  }
+team1.activePlayer++;
+team2.activePlayer++;
 }
 function over(){
   is the numer of players.length array equal to the number of rounds?
