@@ -3,11 +3,8 @@
   /*font-family: lobster; back-up font just in case*/
 }
 
-@font-face {
-  font-family: scribble-box;
-  font-style: normal;
-  font-weight: 400;
-  src: local("scribble-box regular") url('../fonts/scribble-box.ttf'); }
+@font-face { font-family: scribble-box; src: url('../fonts/scribble-box.ttf'); }
+@font-face { font-family: scribble-box; font-weight: bold; src: url('../fonts/scribble-box.ttf');}
 
 ul {
   display: none;
