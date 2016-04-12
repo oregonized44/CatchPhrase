@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 function getTimeRemaining(endtime) {
   var t = Date.parse(endtime) - Date.parse(new Date());
@@ -31,3 +32,11 @@ function initializeClock(id, endtime) {
 
 var deadline = new Date(Date.parse(new Date()) + 120 * 1000);
 initializeClock('clockdiv', deadline);
+=======
+$(document).ready(function() {
+  $("button#rulesButton").click(function() {
+    $("#how-to-play").toggle();
+  });
+
+});
+>>>>>>> c264e6ddffbda517d565c681fa1aacf66060959d
