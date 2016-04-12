@@ -1,4 +1,7 @@
 var wordList = ["dog", "cat", "Parot", "Horse","Song","Loud","Lazy"];
+var team1 = {};
+var team2 = {};
+var game = {};
 
 //CONSTRUCTORS
 
@@ -29,7 +32,29 @@ Team.prototype.nextPlayer = function () {
   this.activePlayer ++;
 }
 
+Storage.prototype.setObject = function (key, object) {
+  this.setItem(key, JSON.stringify(object))
+}
+
+Storage.prototype.getObject = function (key) {
+  return JSON.parse(this.getItem(key));
+}
+
 //FUNCTINOS
+
+function cacheData() {
+  sessionStorage.setObject(game, game);
+  sessionStorage.setObject(team1, team1);
+  sessionStorage.setObject(team2, team2);
+  sessionStorage.setObject(wordList, wordList)
+};
+
+function getCachedData() {
+  game = sessionStorage.getObject(game);
+  team1 = sessionStorage.getObject(team1);
+  team2 = sessionStorage.getObject(team2);
+  wordList = sessionStorage.getObject(wordList);
+};
 
 function nextTurn(){
   if (game.activeTeam === 1) {
@@ -38,25 +63,6 @@ function nextTurn(){
     game.activeTeam = 1;
   }
   //display(newWord());
-}
-
-function play(){     // play button on click willlllll
-  //capture inputs
-  var team1 = new Team (team1Name, team1Players);
-  var team2 = new Team (team2Name, team2Players);
-  var maxPlayers;
-  if (team1.numberOfPlayers > team2.numberOfPlayers) {
-    maxPlayers = team1.numberOfPlayers;
-  } else if (team2.numberOfPlayers > team1.numberOfPlayers) {
-    maxPlayers = team2.numberOfPlayers;
-  } else if (team1.numberOfPlayers === team2.numberOfPlayers) {
-    maxPlayers = team1.numberOfPlayers;
-  }
-  var game = new Game (maxPlayers, 120);
-
-  //data storage
-
-  //display(gamePlay);
 }
 
 function newWord() {      //removes and displays word selected at random from wordList
@@ -80,6 +86,24 @@ function nextRound(){  //what happens when next round take place
     team1.nextPlayer();
     team2.nextPlayer();
   }
+}
+
+function play(){     // play button on click willlllll
+  //capture inputs
+  var team1 = new Team (team1Name, team1Players);
+  var team2 = new Team (team2Name, team2Players);
+  var maxPlayers;
+  if (team1.numberOfPlayers > team2.numberOfPlayers) {
+    maxPlayers = team1.numberOfPlayers;
+  } else if (team2.numberOfPlayers > team1.numberOfPlayers) {
+    maxPlayers = team2.numberOfPlayers;
+  } else if (team1.numberOfPlayers === team2.numberOfPlayers) {
+    maxPlayers = team1.numberOfPlayers;
+  }
+  var game = new Game (maxPlayers, 120);
+  cacheData();
+
+  //display(gamePlay);
 }
 
 function endGame(){   //what happens when game is over
