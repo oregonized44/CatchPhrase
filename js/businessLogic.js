@@ -15,7 +15,7 @@ function Team(name, players){    // contstructs our team object
 function Game(maxRounds, roundDuration){       // constructs our game object
   this.maxRounds = maxRounds;
   this.activeTeam = 1;
-  this.roundNumber = 0;
+  this.roundNumber = 1;
   this.roundDuration = roundDuration;
   this.timer = roundDuration;
 }
@@ -134,7 +134,7 @@ function replayButtonClick(){
   team1.score = 0;
   team2.score = 0;
   game.timer = game.roundDuration;
-  game.roundNumber
+  game.roundNumber = 1;
   cacheData();
   window.location.href = 'game-play.html';
 }
