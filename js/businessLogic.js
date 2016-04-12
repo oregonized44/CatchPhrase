@@ -1,4 +1,4 @@
-var wordList = ['alarm clock', 'money', 'sunburn', 'batteries', 'beer', 'headache', 'peanut butter', 'Internet', 'bicycle', 'YouTube', 'smog', 'baseball', 'Catch Phrase', 'mini golf', 'prize', 'smart phone', 'Google', 'GitHub', 'Neko Atsume', 'puppet', 'monster', 'Halloween', 'apple', 'Wi-Fi', 'peppers', 'tuna', 'aquarium', 'downtown', 'asteroid', 'Starbucks', 'movie', 'pet', 'popcorn', 'bus stop', 'toilet brush', 'breakfast burrito', 'mapel syrup', 'Canadian dollar', 'Pokemon', 'blue', 'beach vollyball', 'zombie', 'wool hat', 'knitted mittens']
+var wordList = ['alarm clock', 'money', 'sunburn', 'batteries', 'beer', 'headache', 'peanut butter', 'Internet', 'bicycle', 'YouTube', 'smog', 'baseball', 'Catch Phrase', 'mini golf', 'prize', 'smart phone', 'Google', 'GitHub', 'Neko Atsume', 'puppet', 'monster', 'Halloween', 'apple', 'Wi-Fi', 'peppers', 'tuna', 'aquarium', 'downtown', 'asteroid', 'Starbucks', 'movie', 'pet', 'popcorn', 'bus stop', 'toilet brush', 'breakfast burrito', 'mapel syrup', 'Canadian dollar', 'Pokemon', 'blue', 'beach vollyball', 'zombie', 'wool hat', 'knitted mittens'];
 var team1 = {};
 var team2 = {};
 var game = {};
@@ -73,9 +73,10 @@ function newWord() {      //returns and removes word selected at random from wor
 }
 
 function timerExpires () {
-  debugger;
   if (game.roundNumber === game.maxRounds) {
     cacheData();
+    var audio = new Audio('scream.mp3');
+    audio.play();
     window.location.href = 'end-game.html';
   } else {
     game.roundNumber++;
@@ -100,10 +101,14 @@ function gamePlayOnLoad() {
 
 function roundOverOnLoad() {
   getCachedData();
+  var audio = new Audio('scream.mp3');
+  audio.play();
 }
 
 function endGameOnLoad() {
   getCachedData();
+  var audio = new Audio('scream.mp3');
+  audio.play();
 }
 
 function nextWordButtonOnClick() {
