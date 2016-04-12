@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 #title-font {
   font-family: scribble-box, sans-serif;
   transform: rotate(-7deg);
@@ -19,24 +19,53 @@
                0 10px 10px rgba(0,0,0,.2),
                0 20px 20px rgba(0,0,0,.15);
   /*font-family: lobster; back-up font just in case*/
-=======
 
-@font-face {
-  font-family: scribble-box;
-  src: url('../fonts/scribble-box.ttf'); }
-
-.title-font {
-    font-family: 'Cabin Sketch', cursive;
-    transform: rotate(-7deg);
-    font-size: 3.5em;
-    color: #A58D72;
-    text-align: center;
-    padding-top: 30px;
-    padding-bottom: 30px;
-  }
+/*Form textbox glow and size*/
+textarea:focus,
+input[type="text"]:focus {
+  border-color: rgb(180, 165, 149);
+  box-shadow: 0 1px 1px rgb(165, 141, 114) inset, 0 0 8px rgb(165, 141, 114);
+  outline: 0 none;
+}
+input {
+    width: 250px;
+    height: 40px;
+}
 @media (min-width: 500px){
-  .title-font {
-    font-family: scribble-box, sans-serif;
+  input {
+    width: 20%;
+    height: 40px;
+  }
+}
+
+/*H1 and H2 fonts small screen*/
+@font-face {
+  font-family: 'scribble-box';
+  src: url('../fonts/scribble-box.ttf');
+}
+h1.title-font {
+  font-family: 'Cabin Sketch', cursive;
+  transform: rotate(-7deg);
+  font-size: 3.5em;
+  color: #A58D72;
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+h2.title-font {
+  font-family: 'Cabin Sketch', cursive;
+  transform: rotate(-7deg);
+  font-size: 3em;
+  color: #1A87B2;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+/*H1 and H2 fonts large screen*/
+@media (min-width: 500px){
+  h1.title-font {
+    font-family: 'scribble-box', sans-serif;
     transform: rotate(-7deg);
     font-size: 8em;
     text-align: center;
@@ -56,7 +85,7 @@
                  0 10px 10px rgba(0,0,0,.2),
                  0 20px 20px rgba(0,0,0,.15);
   }
-  .title-font::after {
+  h1.title-font::after {
       background-color: #1A87B2;
       content: '';
       height: 3px;
@@ -66,26 +95,42 @@
       width: 100%;
       z-index: -1;
   }
-}
-#white-background {
-  background-color: #fff;
+  h2.title-font {
+    font-family: 'Cabin Sketch', cursive;
+    transform: rotate(-7deg);
+    text-align: center;
+    color: #1A87B2;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 6em;
+  }
+  .white-background {
+    background-color: #fff;
+  }
 }
 
+/*Full width and center everything*/
 .container {
   text-align: center;
-}
-ul {
-    list-style-position: inside;
->>>>>>> origin
+  width: 100%;
 }
 
+/*Center list item bullits*/
+ul {
+
+  list-style-position: inside;
+}
+ select.btn {
+   background-color: red;
+ }
 
 /*
-color scheme
+COLOR SCHEME
 A58D72 = Heading Tan
 FFD8AD = Lighter Tan
 FFB159 = Orangecicle
 1A87B2 = Aqua
+<<<<<<< HEAD
 59CFFF = Sky Blue*/
 ul {
   display: none;
