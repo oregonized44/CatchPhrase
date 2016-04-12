@@ -4,3 +4,7 @@ $('#play-button').click(function(event){
   team2 = new Team ($('#team2-input').val(), parseInt($('#team2-num').val()));
   playButtonClick();
 });
+
+$("button#rulesButton").click(function() {
+  $("#how-to-play").toggle();
+});
