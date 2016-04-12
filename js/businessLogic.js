@@ -22,7 +22,7 @@ Team.prototype.won = function () {
   this.score++;
 }
 
-Team.prototype.nextPlayer => function () {
+Team.prototype.nextPlayer = function () {
   if (this.activePlayer === game.maxRounds) {
     this.activePlayer = 0;
   }
@@ -37,6 +37,7 @@ function nextTurn(){
   } else if (game.activeTeam === 2) {
     game.activeTeam = 1;
   }
+  //display(newWord());
 }
 
 function play(){     // play button on click willlllll
@@ -52,7 +53,10 @@ function play(){     // play button on click willlllll
     maxPlayers = team1.numberOfPlayers;
   }
   var game = new Game (maxPlayers, 120);
-  loads following page
+
+  //data storage
+
+  //display(gamePlay);
 }
 
 function newWord() {      //removes and displays word selected at random from wordList
@@ -62,31 +66,30 @@ function newWord() {      //removes and displays word selected at random from wo
   return word;
 }
 
-function pass(){      //what happens when we click pass
-  display(newWord());
-  nextTurn();
-}
-
 function nextRound(){  //what happens when next round take place
-  game.roundNumber++;
-  reset timer function
-  if (game.activeTeam == 1) {
-    team2.won();
-  } else if {
-    team1.won();
+  if (game.roundNumber === game.maxRounds) {
+    endGame();
+  } else {
+    game.roundNumber++;
+    //reset timer function
+    if (game.activeTeam === 1) {
+      team2.won();
+    } else if (game.activeTeam === 2){
+      team1.won();
+    }
+    team1.nextPlayer();
+    team2.nextPlayer();
   }
-  team1.nextPlayer();
-  team2.nextPlayer();
 }
 
-function over(){   //what happens when game is over
-  game.roundNumber === game.maxRounds ?   true (game is over) alert(winner) display last page    : false(nextRound());
+function endGame(){   //what happens when game is over
+  display(endGamePage);
 }
 
 function reset(){
- display(mainPage);
+ //display(titlePage);
 }
 
 function replay(){
-  display(readyPage);
+  //display(gamePlayPage);
 }
