@@ -12,11 +12,12 @@ function Team(name, players){    // contstructs our team object
   this.activePlayer = 1;
 }
 
-function Game(maxRounds, roundLength){       // constructs our game object
+function Game(maxRounds, roundDuration){       // constructs our game object
   this.maxRounds = maxRounds;
   this.activeTeam = 1;
   this.roundNumber = 0;
-  this.timer = roundLength;
+  this.roundDuration = roundDuration;
+  this.timer = roundDuration;
 }
 
 //METHODS
@@ -101,19 +102,29 @@ function play(){     // play button on click willlllll
     maxPlayers = team1.numberOfPlayers;
   }
   var game = new Game (maxPlayers, 120);
-  cacheData();
 
-  //display(gamePlay);
+  cacheData();    //store objects in sessionStorage
+
+  window.location.href = 'gameplay.html';   //navigate to gamePlayPage
 }
 
 function endGame(){   //what happens when game is over
-  display(endGamePage);
+  window.location.href = 'endgame.html';   //navigate to gamePlayPage
+  getCachedData();
 }
 
 function reset(){
- //display(titlePage);
+  ;
 }
 
 function replay(){
-  //display(gamePlayPage);
+
+  //reset scores, timer, and roundNumber
+  team1.score = 0;
+  team2.score = 0;
+  game.timer = game.roundDuration;
+  game.roundNumber
+  cacheData();
+  window.location.href = 'gameplay.html';   //navigate to gamePlayPage
+  getCachedData();
 }
