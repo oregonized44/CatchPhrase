@@ -22,11 +22,11 @@ function Game(maxRounds, roundDuration){       // constructs our game object
 
 //METHODS
 
-Team.prototype.won = function () {
+Object.prototype.won = function () {
   this.score++;
 }
 
-Team.prototype.nextPlayer = function () {
+Object.prototype.nextPlayer = function () {
   if (this.activePlayer === game.maxRounds) {
     this.activePlayer = 0;
   }
@@ -74,9 +74,10 @@ function newWord() {      //returns and removes word selected at random from wor
 }
 
 function timerExpires () {
+  debugger;
   if (game.roundNumber === game.maxRounds) {
     cacheData();
-    endGame();
+    window.location.href = 'endgame.html';
   } else {
     game.roundNumber++;
     //reset timer function
@@ -92,10 +93,6 @@ function timerExpires () {
   }
 };
 
-function endGame(){   //what happens when game is over
-  window.location.href = 'endgame.html';
-}
-
 function gamePlayOnLoad() {
   getCachedData();
   //starttimer;
@@ -106,7 +103,7 @@ function roundOverOnLoad() {
   getCachedData();
 }
 
-function endgameOnLoad() {
+function endGameOnLoad() {
   getCachedData();
 }
 
@@ -128,7 +125,7 @@ function playButtonClick(){          // play button on click willlllll
 }
 
 function resetButtonClick(){
-  window.location.href = 'gameplay.html';
+  window.location.href = 'index.html';
 }
 
 function replayButtonClick(){
@@ -142,11 +139,3 @@ function replayButtonClick(){
 }
 
 //UI LOGIC
-
-$('#play-button').click(function(event){
-  event.preventDefault();
-  team1 = new Team ($('#team1-input').val(), parseInt($('#team1-num').val()));
-  team2 = new Team ($('#team2-input').val(), parseInt($('#team2-num').val()));
-  playButtonClick();
-  window.location.href = 'gameplay.html';
-});
