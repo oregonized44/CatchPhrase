@@ -77,7 +77,7 @@ function timerExpires () {
   debugger;
   if (game.roundNumber === game.maxRounds) {
     cacheData();
-    window.location.href = 'endgame.html';
+    window.location.href = 'end-game.html';
   } else {
     game.roundNumber++;
     //reset timer function
@@ -89,7 +89,7 @@ function timerExpires () {
     team1.nextPlayer();
     team2.nextPlayer();
     cacheData();
-    window.location.href = 'roundover.html';   //navigate to reoundover page
+    window.location.href = 'round-over.html';   //navigate to reoundover page
   }
 };
 
@@ -108,7 +108,7 @@ function endGameOnLoad() {
 }
 
 function nextRoundButtonClick (){     //what happens when next round take place
-  window.location.href = 'gameplay.html';
+  window.location.href = 'game-play.html';
 }
 
 function playButtonClick(){          // play button on click willlllll
@@ -122,6 +122,7 @@ function playButtonClick(){          // play button on click willlllll
   }
   game = new Game (maxPlayers, 120);
   cacheData();    //store objects in sessionStorage
+  window.location.href = 'game-play.html';
 }
 
 function resetButtonClick(){
@@ -135,7 +136,7 @@ function replayButtonClick(){
   game.timer = game.roundDuration;
   game.roundNumber
   cacheData();
-  window.location.href = 'gameplay.html';
+  window.location.href = 'game-play.html';
 }
 
 //UI LOGIC
