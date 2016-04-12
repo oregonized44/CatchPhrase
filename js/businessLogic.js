@@ -1,4 +1,9 @@
-var wordList = ["dog", "cat", "Parot", "Horse","Song","Loud","Lazy"];
+var word-bank: ["alarm clock", "money", "sunburn", "batteries", "beer", "headache", "peanut butter",
+"Internet", "bicycle", "YouTube", "smog", "baseball", "Catch Phrase", "mini golf", "prize", "smart phone",
+"Google", "GitHub", "Neko Atsume", "puppet", "monster", "Halloween", "apple", "Wi-Fi", "peppers", "tuna",
+ "aquarium", "downtown", "asteroid", "Starbucks", "movie", "pet", "popcorn", "bus stop", "toilet brush",
+"breakfast burrito", "mapel syrup", "Canadian dollar", "Pokemon", "blue", "beach vollyball", "zombie",
+"wool hat", "knitted mittens"]
 var team1 = {};
 var team2 = {};
 var game = {};
@@ -73,8 +78,9 @@ function newWord() {      //returns and removes word selected at random from wor
   return word;
 }
 
-function nextRound(){  //what happens when next round take place
+function timerExpires () {
   if (game.roundNumber === game.maxRounds) {
+    cacheData();
     endGame();
   } else {
     game.roundNumber++;
@@ -86,10 +92,34 @@ function nextRound(){  //what happens when next round take place
     }
     team1.nextPlayer();
     team2.nextPlayer();
+    cacheData();
+    window.location.href = 'roundover.html';   //navigate to reoundover page
   }
+};
+
+function endGame(){   //what happens when game is over
+  window.location.href = 'endgame.html';
 }
 
-function play(){     // play button on click willlllll
+function gamePlayOnLoad() {
+  getCachedData();
+  //starttimer;
+  //display(newWord);
+}
+
+function roundoverOnLoad() {
+  getCachedData();
+}
+
+function endgameOnLoad() {
+  getCachedData();
+}
+
+function nextRoundButtonClick (){     //what happens when next round take place
+  window.location.href = 'gameplay.html';
+}
+
+function playButtonClick(){          // play button on click willlllll
   //capture inputs
   var team1 = new Team (team1Name, team1Players);
   var team2 = new Team (team2Name, team2Players);
@@ -105,26 +135,21 @@ function play(){     // play button on click willlllll
 
   cacheData();    //store objects in sessionStorage
 
-  window.location.href = 'gameplay.html';   //navigate to gamePlayPage
+  window.location.href = 'gameplay.html';
+
 }
 
-function endGame(){   //what happens when game is over
-  window.location.href = 'endgame.html';   //navigate to gamePlayPage
-  getCachedData();
+function resetButtonClick(){
+  window.location.href = 'gameplay.html';
 }
 
-function reset(){
-  ;
-}
-
-function replay(){
-
+function replayButtonClick(){
   //reset scores, timer, and roundNumber
   team1.score = 0;
   team2.score = 0;
   game.timer = game.roundDuration;
   game.roundNumber
   cacheData();
-  window.location.href = 'gameplay.html';   //navigate to gamePlayPage
+  window.location.href = 'gameplay.html';
   getCachedData();
 }
