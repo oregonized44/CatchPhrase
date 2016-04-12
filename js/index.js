@@ -5,6 +5,8 @@ $('#play-button').click(function(event){
   playButtonClick();
 });
 
+$('#how-to-play').hide();
+
 $("button#rulesButton").click(function() {
   $("#how-to-play").toggle();
 });
