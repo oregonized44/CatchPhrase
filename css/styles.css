@@ -1,5 +1,6 @@
 .title-font {
   font-family: scribble-box, sans-serif;
+<<<<<<< HEAD
   transform: rotate(-7deg);
   font-size: 10em;
   text-align: center;
@@ -17,10 +18,13 @@
                0 5px 10px rgba(0,0,0,.25),
                0 10px 10px rgba(0,0,0,.2),
                0 20px 20px rgba(0,0,0,.15);
+=======
+>>>>>>> master
 }
 
 @font-face { font-family: scribble-box; src: url('../fonts/scribble-box.ttf'); }
 @font-face { font-family: scribble-box; font-weight: bold; src: url('../fonts/scribble-box.ttf');}
+<<<<<<< HEAD
 
 /*
 color scheme
@@ -29,3 +33,5 @@ FFD8AD = Lighter Tan
 FFB159 = Orangecicle
 1A87B2 = Aqua
 59CFFF = Sky Blue*/
+=======
+>>>>>>> master
