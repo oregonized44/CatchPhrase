@@ -15,7 +15,7 @@ function Team(name, players){    // contstructs our team object
 function Game(maxRounds, roundDuration){       // constructs our game object
   this.maxRounds = maxRounds;
   this.activeTeam = 1;
-  this.roundNumber = 0;
+  this.roundNumber = 1;
   this.roundDuration = roundDuration;
   this.timer = roundDuration;
 }
@@ -63,7 +63,6 @@ function nextTurn(){      //Runs at the end of each turn. Switches activeTeam an
   } else if (game.activeTeam === 2) {
     game.activeTeam = 1;
   }
-  //display(newWord());
 }
 
 function newWord() {      //returns and removes word selected at random from wordList
@@ -107,6 +106,10 @@ function endGameOnLoad() {
   getCachedData();
 }
 
+function nextWordButtonOnClick() {
+  nextTurn();
+}
+
 function nextRoundButtonClick (){     //what happens when next round take place
   window.location.href = 'game-play.html';
 }
@@ -134,7 +137,7 @@ function replayButtonClick(){
   team1.score = 0;
   team2.score = 0;
   game.timer = game.roundDuration;
-  game.roundNumber
+  game.roundNumber = 1;
   cacheData();
   window.location.href = 'game-play.html';
 }
