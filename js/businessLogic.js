@@ -71,18 +71,15 @@ function nextRound(){  //what happens when next round take place
   team1.nextPlayer();
   team2.nextPlayer();
 }
+
 function over(){   //what happens when game is over
-playerNumber === rounds ?   true (game is over) alert(winner) display last page    : false(nextRound());
-is the numer of players.length array equal to the number of rounds?
-
-
+  game.roundNumber === game.maxRounds ?   true (game is over) alert(winner) display last page    : false(nextRound());
 }
+
 function reset(){
- display main page
-
+ display(mainPage);
 }
+
 function replay(){
-  send back to the ready page
-
-
+  display(readyPage);
 }
