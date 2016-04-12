@@ -43,21 +43,21 @@ Storage.prototype.getObject = function (key) {
 
 //FUNCTINOS
 
-function cacheData() {
+function cacheData() {      //caches game object, team objects, and wordList in sessionStorage.
   sessionStorage.setObject(game, game);
   sessionStorage.setObject(team1, team1);
   sessionStorage.setObject(team2, team2);
   sessionStorage.setObject(wordList, wordList)
 };
 
-function getCachedData() {
+function getCachedData() {      // //retrieves game object, team objects, and wordList from sessionStorage.
   game = sessionStorage.getObject(game);
   team1 = sessionStorage.getObject(team1);
   team2 = sessionStorage.getObject(team2);
   wordList = sessionStorage.getObject(wordList);
 };
 
-function nextTurn(){
+function nextTurn(){      //Runs at the end of each turn. Switches activeTeam and displays new word.
   if (game.activeTeam === 1) {
     game.activeTeam = 2;
   } else if (game.activeTeam === 2) {
@@ -66,7 +66,7 @@ function nextTurn(){
   //display(newWord());
 }
 
-function newWord() {      //removes and displays word selected at random from wordList
+function newWord() {      //returns and removes word selected at random from wordList
   var i = Math.floor(Math.random() * wordList.length);
   var word = wordList[i];
   wordList.splice(i,1);
