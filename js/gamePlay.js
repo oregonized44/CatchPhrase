@@ -1,0 +1,1 @@
+gamePlayOnLoad();
