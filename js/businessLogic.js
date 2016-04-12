@@ -63,7 +63,6 @@ function nextTurn(){      //Runs at the end of each turn. Switches activeTeam an
   } else if (game.activeTeam === 2) {
     game.activeTeam = 1;
   }
-  //display(newWord());
 }
 
 function newWord() {      //returns and removes word selected at random from wordList
@@ -105,6 +104,10 @@ function roundOverOnLoad() {
 
 function endGameOnLoad() {
   getCachedData();
+}
+
+function nextWordButtonOnClick() {
+  nextTurn();
 }
 
 function nextRoundButtonClick (){     //what happens when next round take place
