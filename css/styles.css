@@ -1,5 +1,3 @@
-
-
 /*Form textbox glow and size*/
 textarea:focus,
 input[type="text"]:focus {
@@ -64,6 +62,7 @@ h2.title-font {
                  0 5px 10px rgba(0,0,0,.25),
                  0 10px 10px rgba(0,0,0,.2),
                  0 20px 20px rgba(0,0,0,.15);
+    margin-bottom: 40px;
   }
   h1.title-font::after {
       background-color: #1A87B2;
@@ -75,17 +74,29 @@ h2.title-font {
       width: 100%;
       z-index: -1;
   }
+  h1.title-font::before {
+      background-color: #1A87B2;
+      content: '';
+      height: 3px;
+      left: 0;
+      margin-top: 46px;
+      position: absolute;
+      width: 100%;
+      z-index: -1;
+      transform: rotate(14deg);
+  }
   h2.title-font {
     font-family: 'Cabin Sketch', cursive;
     transform: rotate(-7deg);
     text-align: center;
-    color: #1A87B2;
+    color: #FFB159;
     padding-top: 10px;
     padding-bottom: 10px;
     font-size: 6em;
   }
   .white-background {
     background-color: #fff;
+    padding: 30px;
   }
 }
 
@@ -93,24 +104,38 @@ h2.title-font {
 .container {
   text-align: center;
   width: 100%;
+  background-color: #1A87B2;
 }
 
 /*Center list item bullits*/
 ul {
-
   list-style-position: inside;
 }
- select.btn {
-   background-color: red;
- }
 
+/*Try to change dropdown button color*/
+select.btn {
+  background-color: red;
+}
+
+/*Spacing between buttons*/
+button {
+  margin: 25px;
+}
+
+ /*Form border, padding, center*/
+ form#catch-phrase {
+     border: 2px dotted #A58D72;
+     padding: 79px 0px 80px 0px;
+     width: 67%;
+     display: inline-block;
+     margin-top: 30px;
+ }
 /*
 COLOR SCHEME
 A58D72 = Heading Tan
 FFD8AD = Lighter Tan
 FFB159 = Orangecicle
 1A87B2 = Aqua
-<<<<<<< HEAD
 59CFFF = Sky Blue
 */
 /*ul {
@@ -122,6 +147,3 @@ body {
   text-align: center;
 }
 */
-button {
-  margin: 25px;
-}
