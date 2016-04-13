@@ -3,22 +3,17 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <!-- <link href="css/animate.css" rel="stylesheet" type="text/css">
-    <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'> -->
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Cabin+Sketch' rel='stylesheet' type='text/css'>
     <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-    <script src="js/scripts.js"></script>
     <title>Catch Phrase</title>
   </head>
   <body>
+    <!-- Title -->
+    <h1 class="title-font"><span class="white-background">&nbsp;&nbsp;Catch Phrase!</span></h1>
     <div class="container">
-      <!-- <div class="jumbotron">
-        <h1 class="animated rollIn" id="title-font">Catch Phrase!</h1>
-      </div> -->
-      <!-- <div class="jumbotron"> -->
-      <h1 class="title-font"><span class="white-background">&nbsp;&nbsp;Catch Phrase!</span></h1>
-      <!-- </div> -->
+
+      <!-- Form -->
       <form id="catch-phrase">
         <div class="form-group">
           <label for="team1-input"><h2 class="title-font">Team 1</h2></label>
@@ -46,23 +41,23 @@
         </div>
         <button id="play-button" class="btn btn-success">Play!</button>
       </form>
+      <br>
 
-        <button class="btn btn-primary" id="rulesButton">How to Play</button>
-        <ul id="how-to-play">
-          <li>Determine how many players are on each team.</li>
-          <li>Designate a clue giver for each each team to handle the device</li>
-          <li>Each round is two minutes in length, with the number of rounds determined by the number of players.</li>
-          <li>Each clue master will be given a word to describe to their team, but can not say the word itself.</li>
-          <li>Once the word has been guessed correctly, quickly pass the device to the other clue master.</li>
-          <li>The last person to have the device when the timer goes off, loses the round and the other team gets a point.</li>
-          <li>Team with the most points after all rounds completed wins.</li>
-        </ul>
-
-    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+      <!-- Rules   -->
+      <button class="btn btn-primary" id="rulesButton">How to Play</button>
+      <ul id="how-to-play">
+        <li>Determine how many players are on each team.</li>
+        <li>Designate a clue giver for each each team to handle the device</li>
+        <li>Each round is two minutes in length, with the number of rounds determined by the number of players.</li>
+        <li>Each clue master will be given a word to describe to their team, but can not say the word itself.</li>
+        <li>Once the word has been guessed correctly, quickly pass the device to the other clue master.</li>
+        <li>The last person to have the device when the timer goes off, loses the round and the other team gets a point.</li>
+        <li>Team with the most points after all rounds completed wins.</li>
+      </ul>
+    </div>
+    <!-- Random Scripts -->
     <script src="js/scripts.js"></script>
     <script src="js/businessLogic.js"></script>
     <script src="js/index.js"></script>
-
-
   </body>
 </html>
