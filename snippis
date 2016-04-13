@@ -1,0 +1,33 @@
+<!-- Modal -->
+<div class="modal fade" id="team1-modal" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal header -->
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+        <h4>Email me! (not functioning)</h4>
+      </div>
+      <!-- End modal header -->
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        <input type="text" class="form-control" placeholder="Your name">
+        <br>
+        <input type="text" class="form-control" placeholder="Your email address">
+        <br>
+        <textarea class="form-control" placeholder="Message..." rows="10"></textarea>
+      </div>
+      <!-- End modal body -->
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Send</button>
+      </div>
+      <!-- End modal footer -->
+
+    </div>
+  </div>
+</div>
+<!-- End Modal -->
