@@ -75,9 +75,11 @@ function newWord() {      //returns and removes word selected at random from wor
 function checkWinner() {
   if (game.activeTeam === 1) {                // if the active team is team 1 then the
     team2.won();
+    nextTurn();
     console.log("team 2 won");                            // team 2 is awarded a point
   } else if (game.activeTeam === 2){          // else if the active team is 2 then the
     team1.won();
+    nextTurn();
     console.log("team1 wins");                          // team 1 is awarded the point
   }
   team1.nextPlayer();
