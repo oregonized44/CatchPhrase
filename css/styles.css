@@ -122,6 +122,17 @@ button {
   margin: 25px;
 }
 
+img {
+  margin: 5px;
+
+}
+
+.social-icons {
+  text-indent: 150px;
+  text-align: left;
+
+}
+
  /*Form border, padding, center*/
  div#dotted-border {
      border: 2px dotted #A58D72;
