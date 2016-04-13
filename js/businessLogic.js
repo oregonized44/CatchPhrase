@@ -88,6 +88,10 @@ function checkWinner() {
   console.log("team2nextplayer");
 }
 
+function changeGameplayColors() {
+  
+};
+
 function timerExpires () {
   if (game.roundNumber === game.maxRounds) {
     checkWinner();   // checks to see if the current round number is equal to the max number of rounds
@@ -155,7 +159,3 @@ function replayButtonClick(){
   cacheData();
   window.location.href = 'game-play.html';
 }
-
-//UI LOGIC
-
-//nothing to see here.

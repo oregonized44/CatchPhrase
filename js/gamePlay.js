@@ -1,16 +1,23 @@
 function updateActiveTeamAndPlayerDisplay () {
   if (game.activeTeam === 1) {
     $('#active-team').text(team1.teamName);
+    $('#change-color').removeClass('team2');
+    $('#change-color').addClass('team1');
   } else if (game.activeTeam === 2) {
     $('#active-team').text(team2.teamName);
+    $('#change-color').removeClass('team1');
+    $('#change-color').addClass('team2');
   }
   if (game.activeTeam === 1) {
     $('#active-player').text(team1.activePlayer);
-  } else if (game.activePlayer === 2) {
+  } else if (game.activeTeam === 2) {
     $('#active-player').text(team2.activePlayer);
   }
 };
 
+
+
+//countdown timer
 gamePlayOnLoad();
 updateActiveTeamAndPlayerDisplay();
 $('#phrase-display').text(newWord());
@@ -52,7 +59,6 @@ function initializeClock(id, endtime) {
   var timeinterval = setInterval(updateClock, 1000);
 }
 
-var deadline = new Date(Date.parse(new Date()) + 15 * 1000);
+var deadline = new Date(Date.parse(new Date()) + 1500 * 1000);
 initializeClock('clockdiv', deadline);
-
-//this is a comment
+//end countdown timer
