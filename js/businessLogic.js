@@ -28,7 +28,7 @@ Object.prototype.won = function () {
 
 Object.prototype.nextPlayer = function () {
   if (this.activePlayer === game.maxRounds) {
-    this.activePlayer = 0;
+    this.activePlayer = 1;
   }
   this.activePlayer ++;
 }
@@ -91,8 +91,8 @@ function timerExpires () {
     checkWinner();
     cacheData();
     console.log("timer expires")                               // retrieves the game object, team objects, and wordList from sessionStorage
-    var audio = new Audio('scream.mp3');        // creates autdio
-    audio.play();
+    // var audio = new Audio('scream.mp3');        // creates autdio
+    // audio.play();
     console.log("plays");                              // plays audio
     window.location.href = 'end-game.html';     // sends you to the end game page
   } else {
