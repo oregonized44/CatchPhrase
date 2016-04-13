@@ -24,7 +24,7 @@ input {
 h1.title-font {
   font-family: 'Cabin Sketch', cursive;
   transform: rotate(-7deg);
-  font-size: 3.5em;
+  font-size: 5em;
   color: #A58D72;
   text-align: center;
   padding-top: 30px;
@@ -101,7 +101,7 @@ h2.title-font {
 }
 
 /*Full width and center everything*/
-.container {
+.container.home-container {
   text-align: center;
   width: 100%;
   background-color: #1A87B2;
@@ -113,23 +113,78 @@ ul {
 }
 
 /*Try to change dropdown button color*/
-select.btn {
+/*select.btn {
   background-color: red;
-}
+}*/
 
 /*Spacing between buttons*/
 button {
   margin: 25px;
 }
 
- /*Form border, padding, center*/
- div#dotted-border {
-     border: 2px dotted #A58D72;
-     padding: 79px 0px 80px 0px;
-     width: 67%;
-     display: inline-block;
-     margin-top: 30px;
- }
+/*Form border, padding, center*/
+div#dotted-border {
+   border: 2px dotted #A58D72;
+   padding: 79px 0px 80px 0px;
+   width: 67%;
+   display: inline-block;
+   margin-top: 30px;
+}
+
+/*Player Panels*/
+#player1-panel {
+  background-color: #FFB159;
+  text-align:center;
+  color:white;
+  font-weight: bold;
+  font-size: 22px;
+  font-family: 'Cabin Sketch', cursive;
+}
+#player2-panel {
+  background-color: #1A87B2;
+  text-align:center;
+  color: #fff;
+  font-weight: bold;
+  font-size: 22px;
+  font-family: 'Cabin Sketch', cursive;
+}
+
+/*Progress bar color*/
+.progress-bar.progress-bar-striped.progress-bar-team1 {
+  background-color: #1A87B2;
+}
+.progress-bar.progress-bar-striped.progress-bar-team2 {
+  background-color: #FFB159;
+}
+
+/*Timer and Phrase text and color*/
+h2#timer-text {
+  font-size: 100px;
+  text-align:center;
+  color: #A58D72;
+  font-family: 'Cabin Sketch', cursive;
+}
+div#phrase-text {
+  font-size: 100px;
+  text-align:center;
+  color: #A58D72;
+  font-family: 'Cabin Sketch', cursive;
+}
+
+
+/*Color switch on turn*/
+.panel-heading.team1 {
+  background-color: #FFB159;
+}
+.panel-heading.team1 {
+  background-color: #1A87B2;
+}
+
+button#next-word {
+  background-color: #A58D72;
+  border: #A58D72;
+  color: #fff;
+}
 /*
 COLOR SCHEME
 A58D72 = Heading Tan
