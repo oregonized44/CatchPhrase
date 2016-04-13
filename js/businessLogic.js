@@ -28,7 +28,7 @@ Object.prototype.won = function () {
 
 Object.prototype.nextPlayer = function () {
   if (this.activePlayer === game.maxRounds) {
-    this.activePlayer = 0;
+    this.activePlayer = 1;
   }
   this.activePlayer ++;
 }
@@ -72,23 +72,34 @@ function newWord() {      //returns and removes word selected at random from wor
   return word;
 }
 
+function checkWinner() {
+  if (game.activeTeam === 1) {                // if the active team is team 1 then the
+    team2.won();
+    console.log("team 2 won");                            // team 2 is awarded a point
+  } else if (game.activeTeam === 2){          // else if the active team is 2 then the
+    team1.won();
+    consol.log("team1 wins")                           // team 1 is awarded the point
+  }
+  team1.nextPlayer();
+  console.log("team1nextplayer");                       //
+  team2.nextPlayer();
+  console.log("team2nextplayer");
+}
+
 function timerExpires () {
-  if (game.roundNumber === game.maxRounds) {
+  if (game.roundNumber === game.maxRounds) {     // checks to see if the current round number is equal to the max number of rounds
+    checkWinner();
     cacheData();
-    var audio = new Audio('scream.mp3');
-    audio.play();
-    window.location.href = 'end-game.html';
+    console.log("timer expires")                               // retrieves the game object, team objects, and wordList from sessionStorage
+    // var audio = new Audio('scream.mp3');        // creates autdio
+    // audio.play();
+    console.log("plays");                              // plays audio
+    window.location.href = 'end-game.html';     // sends you to the end game page
   } else {
     game.roundNumber++;
-    //reset timer function
-    if (game.activeTeam === 1) {
-      team2.won();
-    } else if (game.activeTeam === 2){
-      team1.won();
-    }
-    team1.nextPlayer();
-    team2.nextPlayer();
-    cacheData();
+    console.log("game.roundNumber");
+    checkWinner();                      // else game round number increments by 1
+    cacheData();                                // // retrieves the game object, team objects, and wordList from sessionStorage
     window.location.href = 'round-over.html';   //navigate to reoundover page
   }
 };
