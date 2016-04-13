@@ -123,7 +123,7 @@ button {
 }
 
  /*Form border, padding, center*/
- form#catch-phrase {
+ div#dotted-border {
      border: 2px dotted #A58D72;
      padding: 79px 0px 80px 0px;
      width: 67%;
