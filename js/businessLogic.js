@@ -1,4 +1,4 @@
-var wordList = ['earth','eclipse','astronaut','black hole','galaxy','comet','binary','dwarf planet','mars','half moon','vacuum','hydrogen','eclpise','gravity','x-ray','rocket','spaceship','zodiac sign','milky way','organs','immune system','muscle','circulatory system','nipple','radius','uterus','clavicle','mandible','larynx','capillary',,dark matter','alarm clock', 'money', 'sunburn', 'batteries', 'beer', 'headache', 'peanut butter', 'Internet', 'bicycle', 'YouTube', 'smog', 'baseball', 'Catch Phrase', 'mini golf', 'prize', 'smart phone', 'Google', 'GitHub', 'Neko Atsume', 'puppet', 'monster', 'Halloween', 'apple', 'Wi-Fi', 'peppers', 'tuna', 'aquarium', 'downtown', 'asteroid', 'Starbucks', 'movie', 'pet', 'popcorn', 'bus stop', 'toilet brush', 'breakfast burrito', 'mapel syrup', 'Canadian dollar', 'Pokemon', 'blue', 'beach vollyball', 'zombie', 'wool hat', 'knitted mittens'];
+var wordList = ['earth','eclipse','astronaut','black hole','galaxy','comet','binary','dwarf planet','mars','half moon','vacuum','hydrogen','eclpise','gravity','x-ray','rocket','spaceship','zodiac sign','milky way','organs','immune system','muscle','circulatory system','nipple','radius','uterus','clavicle','mandible','larynx','capillary','dark matter','alarm clock', 'money', 'sunburn', 'batteries', 'beer', 'headache', 'peanut butter', 'Internet', 'bicycle', 'YouTube', 'smog', 'baseball', 'Catch Phrase', 'mini golf', 'prize', 'smart phone', 'Google', 'GitHub', 'Neko Atsume', 'puppet', 'monster', 'Halloween', 'apple', 'Wi-Fi', 'peppers', 'tuna', 'aquarium', 'downtown', 'asteroid', 'Starbucks', 'movie', 'pet', 'popcorn', 'bus stop', 'toilet brush', 'breakfast burrito', 'mapel syrup', 'Canadian dollar', 'Pokemon', 'blue', 'beach vollyball', 'zombie', 'wool hat', 'knitted mittens'];
 var team1 = {};
 var team2 = {};
 var game = {};
@@ -78,7 +78,7 @@ function checkWinner() {
     console.log("team 2 won");                            // team 2 is awarded a point
   } else if (game.activeTeam === 2){          // else if the active team is 2 then the
     team1.won();
-    consol.log("team1 wins")                           // team 1 is awarded the point
+    console.log("team1 wins");                          // team 1 is awarded the point
   }
   team1.nextPlayer();
   console.log("team1nextplayer");                       //
