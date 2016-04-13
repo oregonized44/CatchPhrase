@@ -54,3 +54,5 @@ function initializeClock(id, endtime) {
 
 var deadline = new Date(Date.parse(new Date()) + 15 * 1000);
 initializeClock('clockdiv', deadline);
+
+//this is a comment
