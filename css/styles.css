@@ -43,7 +43,14 @@ h2.title-font {
   padding-top: 10px;
   padding-bottom: 10px;
 }
-
+h3.title-font {
+  font-family: 'Cabin Sketch', cursive;
+  transform: rotate(-7deg);
+  text-align: center;
+  padding-top: 1.3px;
+  padding-bottom: 10px;
+  font-size: 4em;
+}
 /*Full width and center form on small screens*/
 .center-stuff {
 text-align: center;
@@ -103,6 +110,14 @@ width: 100%;
     padding-top: 10px;
     padding-bottom: 10px;
     font-size: 6em;
+  }
+  h3.title-font {
+    font-family: 'Cabin Sketch', cursive;
+    transform: rotate(-7deg);
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 4em;
   }
   .white-background {
     background-color: #fff;
@@ -228,6 +243,9 @@ button {
 }
 .sky-blue {
   color: #59CFFF;
+}
+.white {
+  color: #FFF;
 }
 
 
