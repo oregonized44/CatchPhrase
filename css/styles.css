@@ -203,7 +203,15 @@ button {
     line-height: 1.333333;
     border-radius: 6px;
 }
-
+.btn.focus, .btn:focus, .btn:hover {
+    color: #F5F5F5;
+    text-decoration: none;
+}
+.btn:focus, .btn:active, .btn:target  {
+  border-color: rgb(180, 165, 149);
+  box-shadow: 0 1px 1px rgb(165, 141, 114) inset, 0 0 8px rgb(165, 141, 114);
+  outline: 0 none;
+}
 /*=======================================*/
 /*All the colors*/
 .orangesicle {
