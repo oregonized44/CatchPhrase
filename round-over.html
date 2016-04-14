@@ -4,29 +4,49 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Cabin+Sketch' rel='stylesheet' type='text/css'>
     <title>Catch Phrase</title>
   </head>
   <body>
+    <!-- Title -->
+    <h1 class="title-font">
+      <span class="white-background">
+        &nbsp;&nbsp;Round
+        <span id="round-num">
+        </span>Over
+      </span>
+    </h1>
+
+    <!-- Player 1 Panel -->
     <div class="container">
-      <div class="jumbotron">
-        <h1 class="title-font">Round <span id="round-num"></span> Over</h1>
-      </div>
       <div class="row">
-          <div class="col-sm-5">
-            <h2><span id="team1-name"></span></h2>
-            <h3>Score: <span id="team1-score"></span></h3>
-          </div>
-          <div class="col-sm-5 col-sm-offset-2">
-            <h2><span id="team2-name"></span></h2>
-            <h3>Score: <span id="team2-score"></span></h3>
-          </div>
+        <div class="col-sm-5" id="player1-panel">
+          <h2>
+            <span id="team1-name"></span>
+          </h2>
+          <h3>
+            Score: <span id="team1-score"></span>
+          </h3>
+        </div>
+
+        <!-- Player 2 Panel -->
+        <div class="col-sm-5 col-sm-offset-2" id="player2-panel">
+          <h2>
+            <span id="team2-name"></span>
+          </h2>
+          <h3>
+            Score: <span id="team2-score"></span>
+          </h3>
+        </div>
       </div>
     </div>
+
+
     <br>
     <div class="container">
       <div class="row">
         <div class="col-sm-12">
-          <button class="btn btn-success" id="next-round" type="button" name="button">Continue On</button>
+          <button class="tn btn-lg  center-block" id="next-round" type="button" name="button">Continue On</button>
         </div>
       </div>
     </div>
