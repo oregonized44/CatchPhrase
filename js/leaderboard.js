@@ -1,19 +1,25 @@
-function Leaderboard() {
-  this.cats = 2;
+var leaderboard = [
+  {name: 'cats', value: 2}
+];
+
+function LeaderboardEntry(team) {
+  this.name = team.teamName.toLowerCase();
+  this.value = 1;
 };
 
-leaderboard = new Leaderboard;
 
 Object.prototype.addToLeaderboard = function () {
   var winningTeamName = this.teamName.toLowerCase();
   var inLeaderBoard = false;
-  for (var key in leaderboard) {
-    if (winningTeamName === key) {
-      leaderboard[key]++;
+  debugger;
+  for (var i = 0; i < leaderboard.length; i++) {
+    if (leaderboard[i].name === winningTeamName) {
+      leaderboard[i].value++;
       inLeaderBoard = true;
     }
-    if (!inLeaderBoard) {
-      leaderboard[winningTeamName] = 1;
-    }
+  }
+  if (!inLeaderBoard) {
+    var Object = new LeaderboardEntry(this)
+    leaderboard.push(Object);
   }
 };
