@@ -29,8 +29,9 @@ Object.prototype.won = function () {
 Object.prototype.nextPlayer = function () {
   if (this.activePlayer === game.maxRounds) {
     this.activePlayer = 1;
+  } else  {
+    this.activePlayer ++;
   }
-  this.activePlayer ++;
 }
 
 Storage.prototype.setObject = function (key, object) {
@@ -57,10 +58,12 @@ function getCachedData() {      // //retrieves game object, team objects, and wo
   wordList = sessionStorage.getObject('wordList');
 };
 
-function nextTurn(){      //Runs at the end of each turn. Switches activeTeam and displays new word.
+function nextTurn(){      //Runs at the end of each turn. Switches activeTeam and iterates activePlayer.
   if (game.activeTeam === 1) {
+    team1.nextPlayer();
     game.activeTeam = 2;
   } else if (game.activeTeam === 2) {
+    team2.nextPlayer();
     game.activeTeam = 1;
   }
 }
@@ -89,7 +92,7 @@ function checkWinner() {
 }
 
 function changeGameplayColors() {
-  
+
 };
 
 function timerExpires () {

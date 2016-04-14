@@ -1,18 +1,15 @@
 function updateActiveTeamAndPlayerDisplay () {
   if (game.activeTeam === 1) {
-    $('#active-team').text(team1.teamName);
     $('#change-color').removeClass('team2');
     $('#change-color').addClass('team1');
   } else if (game.activeTeam === 2) {
-    $('#active-team').text(team2.teamName);
     $('#change-color').removeClass('team1');
     $('#change-color').addClass('team2');
   }
-  if (game.activeTeam === 1) {
-    $('#active-player').text(team1.activePlayer);
-  } else if (game.activeTeam === 2) {
-    $('#active-player').text(team2.activePlayer);
-  }
+  $('#team1-name').text(team1.teamName);
+  $('#team2-name').text(team2.teamName);
+  $('#team1-active-player').text(team1.activePlayer);
+  $('#team2-active-player').text(team2.activePlayer);
 };
 
 
