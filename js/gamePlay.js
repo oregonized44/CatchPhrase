@@ -12,11 +12,21 @@ function updateActiveTeamAndPlayerDisplay () {
   $('#team2-active-player').text(team2.activePlayer);
 };
 
+function calculateScorePercentage(team){
+  var scorePercentage = (team.score / game.maxRounds) * 100;
+  console.log(scorePercentage);
+  return 'width: ' + scorePercentage + '%';
+};
+
 
 
 //countdown timer
 gamePlayOnLoad();
 updateActiveTeamAndPlayerDisplay();
+$('#team1-progress-bar').attr('style', calculateScorePercentage(team1));
+$('#team2-progress-bar').attr('style', calculateScorePercentage(team2));
+$('#team1-score').text(team1.score);
+$('#team2-score').text(team2.score);
 $('#phrase-display').text(newWord());
 $('#round-num').text(game.roundNumber);
 $('#timer-display').text("2:00");
