@@ -4,53 +4,94 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Cabin+Sketch' rel='stylesheet' type='text/css'>
     <link href="css/colorchange.css" rel="stylesheet" type="text/css">
     <title>Catch Phrase</title>
   </head>
   <body>
+    <!-- Title -->
+    <h1 class="title-font"><span class="white-background">&nbsp;&nbsp;Game On!</span></h1>
     <div class="container">
-      <div class="jumbotron">
-        <h1 class="title-font">Game On!</h1>
-      </div>
       <div class="row">
-        <div class="col-sm-5">
-          <h2><span id="active-team"></span></h2>
-          <h2>Player <span id="active-player"></span></h2>
-          <h2>Round <span id="round-num"></span></h2>
+
+        <!-- Player 1 Panel -->
+        <div class="col-sm-5" >
+          <div class="panel panel-default" id="player1-panel">
+            <div class="panel-body">
+              <h2><span id="team1-name"></span></h2>
+              <h2>Player <span id="active-player"></span></h2>
+              <h2>Round <span id="round-num"></span></h2>
+              <h2>Score <span id="team1-score"></span></h2>
+              <div class="progress">
+                <div class="progress-bar progress-bar-striped progress-bar-team1" id="player1-progress-bar" role="progressbar" aria-valuenow="5" aria-valuemin="0" aria-valuemax="5">
+                  <span id="team1-score"></span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+
+        <!-- Player 2 Panel -->
         <div class="col-sm-5 col-sm-offset-2">
-          <h1>Countdown Clock</h1>
-          <div id="clockdiv">
-            <div>
-              <h2><span class="minutes"></span>:<span class="seconds"></span></h2>
+          <div class="panel panel-default" id="player2-panel">
+            <div class="panel-body">
+              <h2><span id="team2-name"></span></h2>
+              <h2>Player <span id="active-player"></span></h2>
+              <h2>Round <span id="round-num"></span></h2>
+              <h2>Score <span id="team2-score"></span></h2>
+              <div class="progress">
+                <div class="progress-bar progress-bar-striped progress-bar-team2" id="player2-progress-bar" role="progressbar" aria-valuenow="5" aria-valuemin="0" aria-valuemax="5">
+                  <span id="team1-score"></span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+    <hr>
+
+    <!-- Timer -->
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div id="clockdiv">
+            <div>
+              <h2 id="timer-text">
+                <div class="panel panel-default">
+                  <div class="panel-body">
+                    <span class="minutes"></span>:
+                    <span class="seconds"></span>
+                  </div>
+                </div>
+              </h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Phrase/Word -->
     <div class="container">
       <div class="row">
         <div class="col-sm-12">
           <div class="panel panel-default">
-            <div class="panel-heading team2" id="change-color">
-              <h3 class="panel-title ">Current Word/Phrase</h3>
+            <!-- switching team color -->
+            <div class="panel-heading team1">
             </div>
-            <!-- <div class="panel-heading hidden">
-              <h3 class="panel-title">Verbal/Gesture</h3>
-            </div> -->
-            <div class="panel-body">
-              <span class="" id="phrase-display"><span>
+            <!-- actual phrase -->
+            <div class="panel-body" id="phrase-text">
+              <span id="phrase-display"><span>
             </div>
           </div>
-          <button id="next-word" class="btn btn-success" type="button" name="NextWord">Next Word/Phrase</button>
+          <button id="next-word" class="btn btn-lg  center-block" type="button" name="NextWord">Next Word/Phrase</button>
         </div>
       </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
     <script src="js/scripts.js"></script>
-    <script src="js/businesslogic.js"></script>
-    <script src="js/gameplay.js"></script>
-
+    <script src="js/businessLogic.js"></script>
+    <script src="js/gamePlay.js"></script>
   </body>
 </html>
