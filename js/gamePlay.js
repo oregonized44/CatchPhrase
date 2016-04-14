@@ -2,14 +2,16 @@ function updateActiveTeamAndPlayerDisplay () {
   if (game.activeTeam === 1) {
     $('#change-color').removeClass('team2');
     $('#change-color').addClass('team1');
+    $('#active-team').text(team1.teamName)
+    $('#active-player').text('Player ' + team1.activePlayer);
   } else if (game.activeTeam === 2) {
     $('#change-color').removeClass('team1');
     $('#change-color').addClass('team2');
+    $('#active-team').text(team2.teamName)
+    $('#active-player').text('Player ' + team2.activePlayer);
   }
   $('#team1-name').text(team1.teamName);
   $('#team2-name').text(team2.teamName);
-  $('#team1-active-player').text(team1.activePlayer);
-  $('#team2-active-player').text(team2.activePlayer);
 };
 
 function calculateScorePercentage(team){
