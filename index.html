@@ -10,43 +10,48 @@
   <body>
     <!-- Title -->
     <h1 class="title-font"><span class="white-background">&nbsp;&nbsp;Catch Phrase!</span></h1>
-    <div class="container home-container">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6 dotted-border">
 
-      <!-- Dotted border -->
-      <div id="dotted-border">
         <!-- Form -->
-        <form id="catch-phrase">
-          <div class="form-group">
-            <label for="team1-input"><h2 class="title-font">Team 1</h2></label>
-            <input type="text" class"form-control" placeholder="ThunderCats" id="team1-input">
-            <br>
-            <label for="team1-num"># of Players:</label>
-              <select id="team1-num" class="input-lg">
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-              </select>
-          </div>
-          <div class="form-group">
-            <label for="team1-input"><h2 class="title-font">Team 2</h2></label>
-            <input type="text" class"form-control" placeholder="Transformers" id="team2-input">
-            <br>
-            <label for="team2-num"># of Players:</label>
+          <form class="center-stuff" id="catch-phrase">
+            <!-- Team 1 input -->
+            <div class="form-group">
+              <label for="team1-input"><h2 class="title-font orangesicle">Team 1</h2></label>
+              <br>
+              <input type="text" class"form-control" placeholder="ThunderCats" id="team1-input">
+              <br>
+              <label class="larger-text" for="team1-num"># of Players:</label>
+                <select id="team1-num" class="input-lg">
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+            </div>
+            <!-- Team 2 Input -->
+            <div class="form-group">
+              <label for="team2-input"><h2 class="title-font aqua">Team 2</h2></label>
+              <br>
+              <input type="text" class"form-control" placeholder="Transformers" id="team2-input">
+              <br>
+              <label  class="larger-text" for="team2-num"># of Players:</label>
               <select id="team2-num" class="input-lg">
                 <option value="2">2</option>
                 <option value="3">3</option>
                 <option value="4">4</option>
                 <option value="5">5</option>
               </select>
-          </div>
-          <button id="play-button" class="btn btn-success">Play!</button>
-        </form>
-        <br>
+            </div>
+          </form>
+          <hr>
+        </div>
 
+        <div class="col-sm-6">
         <!-- Rules   -->
-        <button class="btn btn-primary" id="rulesButton">How to Play</button>
-        <ul id="how-to-play">
+        <h2 class="title-font heading-tan">How to Play</h2>
+        <ol >
           <li>Determine how many players are on each team.</li>
           <li>Designate a clue giver for each each team to handle the device</li>
           <li>Each round is two minutes in length, with the number of rounds determined by the number of players.</li>
@@ -54,7 +59,8 @@
           <li>Once the word has been guessed correctly, quickly pass the device to the other clue master.</li>
           <li>The last person to have the device when the timer goes off, loses the round and the other team gets a point.</li>
           <li>Team with the most points after all rounds completed wins.</li>
-        </ul>
+        </ol>
+        <button id="play-button" class="btn btn-lg  center-block">Start the Timer!</button>
       </div>
     </div>
     <!-- Random Scripts -->

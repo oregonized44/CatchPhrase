@@ -1,3 +1,4 @@
+/*=======================================*/
 /*Form textbox glow and size*/
 textarea:focus,
 input[type="text"]:focus {
@@ -11,11 +12,15 @@ input {
 }
 @media (min-width: 500px){
   input {
-    width: 20%;
+    width: 75%;
     height: 40px;
+    display:flex;
+    justify-content:flex-end;
+    align-items:center
   }
 }
 
+/*=======================================*/
 /*H1 and H2 fonts small screen*/
 @font-face {
   font-family: 'scribble-box';
@@ -34,12 +39,18 @@ h2.title-font {
   font-family: 'Cabin Sketch', cursive;
   transform: rotate(-7deg);
   font-size: 3em;
-  color: #1A87B2;
   text-align: center;
   padding-top: 10px;
   padding-bottom: 10px;
 }
 
+/*Full width and center form on small screens*/
+.center-stuff {
+text-align: center;
+width: 100%;
+}
+
+/*=======================================*/
 /*H1 and H2 fonts large screen*/
 @media (min-width: 500px){
   h1.title-font {
@@ -89,7 +100,6 @@ h2.title-font {
     font-family: 'Cabin Sketch', cursive;
     transform: rotate(-7deg);
     text-align: center;
-    color: #FFB159;
     padding-top: 10px;
     padding-bottom: 10px;
     font-size: 6em;
@@ -98,39 +108,37 @@ h2.title-font {
     background-color: #fff;
     padding: 30px;
   }
-}
-
-/*Full width and center everything*/
-.container.home-container {
-  text-align: center;
+  /*Form border, padding, center*/
+  div.dotted-border {
+     border-right: 2px dashed #A58D72;
+     /*padding: 79px 0px 80px 0px;
+     width: 67%;*/
+     display: inline-block;
+     background-color: #fff;
+  }
+  .center-stuff {
+  text-align: left;
   width: 100%;
-  background-color: #1A87B2;
+  }
+}
+/*=======================================*/
+/*Larger class and list items*/
+.larger-text {
+  font-size: 2em;
+  font-family: 'Cabin Sketch', cursive;
+}
+li {
+  font-family: 'Cabin Sketch', cursive;
+  font-size: 1.3em;
 }
 
-/*Center list item bullits*/
-ul {
-  list-style-position: inside;
-}
-
-/*Try to change dropdown button color*/
-/*select.btn {
-  background-color: red;
-}*/
-
+/*=======================================*/
 /*Spacing between buttons*/
 button {
   margin: 25px;
 }
 
-/*Form border, padding, center*/
-div#dotted-border {
-   border: 2px dotted #A58D72;
-   padding: 79px 0px 80px 0px;
-   width: 67%;
-   display: inline-block;
-   margin-top: 30px;
-}
-
+/*=======================================*/
 /*Player Panels*/
 #player1-panel {
   background-color: #FFB159;
@@ -149,6 +157,7 @@ div#dotted-border {
   font-family: 'Cabin Sketch', cursive;
 }
 
+/*=======================================*/
 /*Progress bar color*/
 .progress-bar.progress-bar-striped.progress-bar-team1 {
   background-color: #1A87B2;
@@ -157,6 +166,7 @@ div#dotted-border {
   background-color: #FFB159;
 }
 
+/*=======================================*/
 /*Timer and Phrase text and color*/
 h2#timer-text {
   font-size: 100px;
@@ -171,7 +181,7 @@ div#phrase-text {
   font-family: 'Cabin Sketch', cursive;
 }
 
-
+/*=======================================*/
 /*Color switch on turn*/
 .panel-heading.team1 {
   background-color: #FFB159;
@@ -180,20 +190,39 @@ div#phrase-text {
   background-color: #1A87B2;
 }
 
-button#next-word {
+/*=======================================*/
+/*custom button size and color*/
+button {
   background-color: #A58D72;
   border: #A58D72;
   color: #fff;
 }
-
-img {
-  margin: 5px;
+.btn-group-lg>.btn, .btn-lg {
+    padding: 10px 40px;
+    font-size: 32px;
+    line-height: 1.333333;
+    border-radius: 6px;
 }
 
-.social-icons {
-  text-indent: 150px;
-  text-align: left;
+/*=======================================*/
+/*All the colors*/
+.orangesicle {
+  color: #FFB159;
 }
+.heading-tan {
+  color: #A58D72;
+}
+.lighter-tan {
+  color: #FFD8AD;
+}
+.aqua {
+  color: #1A87B2;
+}
+.sky-blue {
+  color: #59CFFF;
+}
+
+
 
 /*
 COLOR SCHEME
@@ -212,3 +241,13 @@ body {
   text-align: center;
 }
 */
+/*=======================================*/
+/*Needed?*/
+img {
+  margin: 5px;
+}
+
+.social-icons {
+  text-indent: 150px;
+  text-align: left;
+}
