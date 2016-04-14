@@ -1,4 +1,4 @@
-var wordList = ['earth','eclipse','astronaut','black hole','galaxy','comet','binary','dwarf planet','mars','half moon','vacuum','hydrogen','eclpise','gravity','x-ray','rocket','spaceship','zodiac sign','milky way','organs','immune system','muscle','circulatory system','nipple','radius','uterus','clavicle','mandible','larynx','capillary','dark matter','alarm clock', 'money', 'sunburn', 'batteries', 'beer', 'headache', 'peanut butter', 'Internet', 'bicycle', 'YouTube', 'smog', 'baseball', 'Catch Phrase', 'mini golf', 'prize', 'smart phone', 'Google', 'GitHub', 'Neko Atsume', 'puppet', 'monster', 'Halloween', 'apple', 'Wi-Fi', 'peppers', 'tuna', 'aquarium', 'downtown', 'asteroid', 'Starbucks', 'movie', 'pet', 'popcorn', 'bus stop', 'toilet brush', 'breakfast burrito', 'mapel syrup', 'Canadian dollar', 'Pokemon', 'blue', 'beach vollyball', 'zombie', 'wool hat', 'knitted mittens'];
+var wordList = ['earth','eclipse','astronaut','black hole','galaxy','comet','binary','dwarf planet','mars','half moon','vacuum','hydrogen','eclpise','gravity','x-ray','rocket','spaceship','zodiac sign','milky way','organs','immune system','muscle','circulatory system','nipple','radius','uterus','clavicle','mandible','larynx','capillary','dark matter','alarm clock', 'money', 'sunburn', 'batteries', 'beer', 'headache', 'peanut butter', 'Internet', 'bicycle', 'YouTube', 'smog', 'baseball', 'Catch Phrase', 'mini golf', 'prize', 'smart phone', 'Google', 'GitHub', 'Neko Atsume', 'puppet', 'monster', 'Halloween', 'apple', 'Wi-Fi', 'peppers', 'tuna', 'aquarium', 'downtown', 'asteroid', 'Starbucks', 'movie', 'pet', 'popcorn', 'bus stop', 'toilet brush', 'breakfast burrito', 'mapel syrup', 'Canadian dollar', 'Pokemon', 'blue', 'beach vollyball', 'zombie', 'wool hat', 'knitted mittens', 'love seat', 'pineapple', 'whale shark', 'ice cream', 'business suit', 'root beer', 'balcony', 'apple pie', 'hockey stick', 'Ireland', 'aloe plant', 'facebook'];
 var team1 = {};
 var team2 = {};
 var game = {};
@@ -88,6 +88,10 @@ function checkWinner() {
   console.log("team2nextplayer");
 }
 
+function changeGameplayColors() {
+  
+};
+
 function timerExpires () {
   if (game.roundNumber === game.maxRounds) {
     checkWinner();   // checks to see if the current round number is equal to the max number of rounds
@@ -155,5 +159,3 @@ function replayButtonClick(){
   cacheData();
   window.location.href = 'game-play.html';
 }
-
-//UI LOGIC

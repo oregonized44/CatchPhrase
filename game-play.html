@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Cabin+Sketch' rel='stylesheet' type='text/css'>
+    <link href="css/colorchange.css" rel="stylesheet" type="text/css">
     <title>Catch Phrase</title>
   </head>
   <body>
@@ -50,6 +51,7 @@
     </div>
     <hr>
 
+    <!-- Timer -->
     <div class="container">
       <div class="row">
         <div class="col-sm-12">
@@ -68,12 +70,16 @@
         </div>
       </div>
     </div>
+
+    <!-- Phrase/Word -->
     <div class="container">
       <div class="row">
         <div class="col-sm-12">
           <div class="panel panel-default">
-            <div class="panel-heading">
+            <!-- switching team color -->
+            <div class="panel-heading team1">
             </div>
+            <!-- actual phrase -->
             <div class="panel-body" id="phrase-text">
               <span id="phrase-display"><span>
             </div>
@@ -85,8 +91,7 @@
 
     <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
     <script src="js/scripts.js"></script>
-    <!-- <script src="js/businessLogic.js"></script>
-    <script src="js/gamePlay.js"></script> -->
-<!-- HERE IS A COMMENT -->
+    <script src="js/businessLogic.js"></script>
+    <script src="js/gamePlay.js"></script>
   </body>
 </html>

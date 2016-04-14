@@ -185,6 +185,16 @@ button#next-word {
   border: #A58D72;
   color: #fff;
 }
+
+img {
+  margin: 5px;
+}
+
+.social-icons {
+  text-indent: 150px;
+  text-align: left;
+}
+
 /*
 COLOR SCHEME
 A58D72 = Heading Tan
