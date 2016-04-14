@@ -1,0 +1,61 @@
+
+.fbLink {
+  display: inline-block;
+  width: 96px;
+  height: 95px;
+  background-image: url('../img/fb.png');
+}
+
+.fbLink:hover {
+  background-image: url('../img/fbHover.png');
+}
+
+.twitterLink {
+  display: inline-block;
+  width: 96px;
+  height: 95px;
+  background-image: url('../img/twitter.png');
+}
+
+.twitterLink:hover {
+  background-image: url('../img/twitterHover.png');
+
+}
+
+.gLink {
+  display: inline-block;
+  width: 96px;
+  height: 95px;
+  background-image: url('../img/g.png');
+
+}
+
+.gLink:hover {
+  background-image: url('../img/gHover.png');
+}
+
+.gitLink {
+  display: inline-block;
+  width: 96px;
+  height: 95px;
+  background-image: url('../img/git.png');
+}
+
+.gitLink:hover {
+  background-image: url('../img/gitHover.png');
+}
+
+.resLink {
+  display: inline-block;
+  width: 96px;
+  height: 95px;
+  background-image: url('../img/res.png');
+}
+
+.resLink:hover {
+  background-image: url('../img/resHover.png');
+}
+
+.btn {
+  margin-bottom: 50px;
+}
