@@ -19,7 +19,18 @@ Object.prototype.addToLeaderboard = function () {
     }
   }
   if (!inLeaderBoard) {
-    var Object = new LeaderboardEntry(this)
+    var Object = new LeaderboardEntry(this);
     leaderboard.push(Object);
   }
 };
+
+
+  leaderboard.sort(a,b)
+    if (a.value > b.value) {
+      return 1;
+    }
+    if (b.value > a.value) {
+      return -1;
+    }
+    return 0;
+    };
