@@ -1,6 +1,6 @@
 # _Word Potato_
 
-#### _When opened in a browser, will display a timed word guessing game prompting two teams of at least 2 people to play, 04/14/2016_
+#### _When opened in a browser, will display a timed word guessing game prompting two teams of at least two people to play, 04/14/2016_
 
 #### By _**Andrew Russo, Connor Cummings, John Klein, LaTaevia Berry**_
 
@@ -14,7 +14,7 @@ _This a dynamic, mobile friendly webpage, conceived by Connor Cummings as an end
 * _Project Files will be in your Downloads folder_
 * _Open files in any text editor to view source code_
 * _Open index.html in any browser to enjoy_
-*  _Also viewable at http://oregonized44.github.io/CatchPhrase/
+* _Also viewable at http://oregonized44.github.io/CatchPhrase/
 
 ## Technologies Used
 
