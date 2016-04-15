@@ -2,13 +2,27 @@ function updateActiveTeamAndPlayerDisplay () {
   if (game.activeTeam === 1) {
     $('#change-color').removeClass('team2');
     $('#change-color').addClass('team1');
-    $('#active-team').text(team1.teamName)
-    $('#active-player').text('Player ' + team1.activePlayer);
+    if (team1.teamMates[0] === null) {
+      $('#active-team').text(team1.teamName)
+      $('#active-player').text('Player ' + team1.activePlayer);
+    } else {
+      $('#active-team').empty()
+      var activePlayerIndex = team1.activePlayer - 1;
+      console.log(activePlayerIndex);
+      $('#active-player').text(team1.teamMates[activePlayerIndex]);
+    }
   } else if (game.activeTeam === 2) {
     $('#change-color').removeClass('team1');
     $('#change-color').addClass('team2');
-    $('#active-team').text(team2.teamName)
-    $('#active-player').text('Player ' + team2.activePlayer);
+    if (team2.teamMates[0] === null) {
+      $('#active-team').text(team2.teamName)
+      $('#active-player').text('Player ' + team2.activePlayer);
+    } else {
+      $('#active-team').empty()
+      var activePlayerIndex = team2.activePlayer - 1;
+      console.log(activePlayerIndex);
+      $('#active-player').text(team2.teamMates[activePlayerIndex]);
+    }
   }
   $('#team1-name').text(team1.teamName);
   $('#team2-name').text(team2.teamName);
