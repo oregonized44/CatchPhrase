@@ -55,3 +55,7 @@
 .resLink:hover {
   background-image: url('../img/resHover.png');
 }
+
+.icons-center {
+  text-align: center;
+}
