@@ -21,6 +21,42 @@
     <div class="container">
       <div class="row">
 
+
+        <!-- Player 1 Panel -->
+        <div class="col-sm-5" >
+          <div class="panel panel-default" id="player1-panel">
+            <div class="panel-body">
+              <h2><span id="team1-name"></span></h2>
+              <h2>Score <span id="team1-score"></span></h2>
+              <div class="progress">
+                <div class="progress-bar progress-bar-striped progress-bar-team1" id="team1-progress-bar" role="progressbar">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Player 2 Panel -->
+        <div class="col-sm-5 col-sm-offset-2">
+          <div class="panel panel-default" id="player2-panel">
+            <div class="panel-body">
+              <h2><span id="team2-name"></span></h2>
+              <!-- <h2>Player <span id="team2-active-player"></span></h2> -->
+              <h2>Score <span id="team2-score"></span></h2>
+              <div class="progress">
+                <div class="progress-bar progress-bar-striped progress-bar-team2" id="team2-progress-bar" role="progressbar" aria-valuenow="5" aria-valuemin="0" aria-valuemax="5">
+                  <span></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+
           <!-- Replay Button -->
           <div class="col-sm-5">
             <button class="btn btn-lg center-block" type="button" name="button" id="replay-game">Replay</button>
@@ -33,6 +69,7 @@
         </div>
       </div>
     </div>
+    <hr>
     <br>
     <div class="container">
       <div class="row" id="socialIcons">
@@ -40,11 +77,13 @@
           <h2 class="title-font aqua">
             Share your score with the internet!
           </h2>
-          <a href="https://www.facebook.com/profile.php?id=100011820752391" class="fbLink"></a>
-          <a href="https://twitter.com/epicodus_cp" class="twitterLink" align="right"></a>
-          <a href="https://plus.google.com/u/0/102528898652203879162/posts" class="gLink"></a>
-          <a href="https://github.com/cp-epicodus" class="gitLink"></a>
-          <a href="#" class="resLink"></a>
+          <div class="center-jive">
+            <a href="https://www.facebook.com/profile.php?id=100011820752391" class="fbLink"></a>
+            <a href="https://twitter.com/epicodus_cp" class="twitterLink" align="right"></a>
+            <a href="https://plus.google.com/u/0/102528898652203879162/posts" class="gLink"></a>
+            <a href="https://github.com/cp-epicodus" class="gitLink"></a>
+            <a href="#" class="resLink"></a>
+          </div>
         </div>
       </div>
     </div>

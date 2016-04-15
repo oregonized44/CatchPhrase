@@ -56,7 +56,11 @@ h3.title-font {
 text-align: center;
 width: 100%;
 }
-
+/*Full width and center form on all screens*/
+.center-jive {
+text-align: center;
+width: 100%;
+}
 /*=======================================*/
 /*H1 and H2 fonts large screen*/
 @media (min-width: 500px){
@@ -135,6 +139,10 @@ width: 100%;
   text-align: left;
   width: 100%;
   }
+  .center-stuff2 {
+  text-align: center;
+  width: 100%;
+  }
 }
 /*=======================================*/
 /*Larger class and list items*/
@@ -147,11 +155,6 @@ li {
   font-size: 1.3em;
 }
 
-/*=======================================*/
-/*Spacing between buttons*/
-button {
-  margin: 25px;
-}
 
 /*=======================================*/
 /*Player Panels*/
@@ -227,6 +230,8 @@ button {
   box-shadow: 0 1px 1px rgb(165, 141, 114) inset, 0 0 8px rgb(165, 141, 114);
   outline: 0 none;
 }
+/*removed bootstrap margin bottom from bootstrap file*/
+
 /*=======================================*/
 /*All the colors*/
 .orangesicle {
@@ -258,15 +263,6 @@ FFB159 = Orangecicle
 1A87B2 = Aqua
 59CFFF = Sky Blue
 */
-/*ul {
-  display: none;
-  text-align: left;
-
-}
-body {
-  text-align: center;
-}
-*/
 /*=======================================*/
 /*Needed?*/
 img {
@@ -277,3 +273,17 @@ img {
   text-indent: 150px;
   text-align: left;
 }
+/*=======================================*/
+/*Spacing between buttons*/
+button {
+  margin: 25px;
+}
+/*ul {
+display: none;
+text-align: left;
+
+}
+body {
+text-align: center;
+}
+*/
