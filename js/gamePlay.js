@@ -1,26 +1,29 @@
+//Function that updates the active player and team display
 function updateActiveTeamAndPlayerDisplay () {
   if (game.activeTeam === 1) {
+    //change color of pannel header
     $('#change-color').removeClass('team2');
     $('#change-color').addClass('team1');
-    if (team1.teamMates[0] === null) {
+    //display either "Player 1" or playerName, depending on whether player names were specified
+    if (team1.teamMates[0] === null) {  //if no names specified
       $('#active-team').text(team1.teamName)
       $('#active-player').text('Player ' + team1.activePlayer);
-    } else {
+    } else {                            //if names specified
       $('#active-team').empty()
       var activePlayerIndex = team1.activePlayer - 1;
-      console.log(activePlayerIndex);
       $('#active-player').text(team1.teamMates[activePlayerIndex]);
     }
   } else if (game.activeTeam === 2) {
+    //change color of pannel header
     $('#change-color').removeClass('team1');
     $('#change-color').addClass('team2');
-    if (team2.teamMates[0] === null) {
+    //display either "Player 1" or playerName, depending on whether player names were specified
+    if (team2.teamMates[0] === null) {  //if no names specified
       $('#active-team').text(team2.teamName)
       $('#active-player').text('Player ' + team2.activePlayer);
-    } else {
+    } else {                           //if names specified
       $('#active-team').empty()
       var activePlayerIndex = team2.activePlayer - 1;
-      console.log(activePlayerIndex);
       $('#active-player').text(team2.teamMates[activePlayerIndex]);
     }
   }
@@ -28,9 +31,9 @@ function updateActiveTeamAndPlayerDisplay () {
   $('#team2-name').text(team2.teamName);
 };
 
+//Function to calculate current score as a percentage of total possible points
 function calculateScorePercentage(team){
   var scorePercentage = (team.score / game.maxRounds) * 100;
-  console.log(scorePercentage);
   return 'width: ' + scorePercentage + '%';
 };
 
