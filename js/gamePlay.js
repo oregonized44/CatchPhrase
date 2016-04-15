@@ -68,6 +68,6 @@ function initializeClock(id, endtime) {
   var timeinterval = setInterval(updateClock, 1000);
 }
 
-var deadline = new Date(Date.parse(new Date()) + 1500 * 1000);
+var deadline = new Date(Date.parse(new Date()) + 100 * 1000);
 initializeClock('clockdiv', deadline);
 //end countdown timer

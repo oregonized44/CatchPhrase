@@ -5,11 +5,12 @@ var game = {};
 
 //CONSTRUCTORS
 
-function Team(name, players){    // contstructs our team object
+function Team(name, players, teamMates){    // contstructs our team object
   this.teamName = name;
   this.numberOfPlayers = players;
   this.score = 0;
   this.activePlayer = 1;
+  this.teamMates = teamMates;
 }
 
 function Game(maxRounds, roundDuration){       // constructs our game object
